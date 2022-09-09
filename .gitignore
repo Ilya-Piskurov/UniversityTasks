@@ -1,1 +1,5 @@
-*/target/
+*/target
+Java/J2EE/Practice1/target/classes/org/sumdu/Employee.class
+Java/J2EE/Practice1/target/classes/org/sumdu/FieldLengthLimitException.class
+Java/J2EE/Practice1/target/classes/org/sumdu/IncorrectSalaryException.class
+Java/J2EE/Practice1/target/classes/org/sumdu/Main.class
