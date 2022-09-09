@@ -9,8 +9,10 @@ public class Employee {
     private String name;
     private String surname;
     private double salary;
+    private boolean dataCorruption;
 
     public Employee(String name, String surname, double salary) {
+        dataCorruption = false;
         id = nextId;
         nextId++;
         try {
@@ -18,6 +20,7 @@ public class Employee {
             setSurname(surname);
             setSalary(salary);
         } catch (FieldLengthLimitException | IncorrectSalaryException e) {
+            dataCorruption = true;
             System.out.println(e.getMessage());
         }
         // По суті оскільки нас тут цікавить тільки повідомлення з
@@ -27,7 +30,6 @@ public class Employee {
 
     public void setName(String name) throws FieldLengthLimitException {
         if (name.length() > MAX_LENGTH) {
-            this.name = "";
             throw new FieldLengthLimitException(
                     "Занадто довге ім'я (ліміт " + MAX_LENGTH + ")!"
             );
@@ -38,7 +40,6 @@ public class Employee {
 
     public void setSurname(String surname) throws FieldLengthLimitException {
         if (surname.length() > MAX_LENGTH) {
-            this.surname = "";
             throw new FieldLengthLimitException(
                     "Занадтно довге прізвище (ліміт " + MAX_LENGTH + ")!"
             );
@@ -49,7 +50,6 @@ public class Employee {
 
     public void setSalary(double salary) throws IncorrectSalaryException {
         if (salary < 0) {
-            this.salary = -1;
             throw new IncorrectSalaryException("Зарплатня не може бути негативною!");
         } else {
             this.salary = salary;
@@ -57,8 +57,8 @@ public class Employee {
     }
 
     public void printInfo() {
-        if (name.equals("") || surname.equals("") || salary == -1) {
-            System.out.println("Не всі дані коректні.\n");
+        if (dataCorruption) {
+            System.out.println("printInfo: Не всі дані коректні.\n");
             return;
         }
         System.out.printf(
