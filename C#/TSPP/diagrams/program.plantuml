@@ -1,0 +1,67 @@
+@startuml program
+
+actor User
+
+box "View" #LightBlue
+participant Form1
+end box
+
+box "Controller" #LightCoral
+participant WordAPI
+participant AuthProvider
+end box
+
+box "Model" #LightGoldenRodYellow
+participant StorageManager
+participant ShoesManager
+participant AuthManager
+end box
+
+database ShoesStorage
+database AuthStorage
+entity MSWordFile
+
+User -> Form1: AuthButton_click()
+Form1 -> AuthProvider: Authorization(User user)
+AuthProvider -> AuthManager: Authorization(User user)
+AuthManager -> AuthStorage: SQL_Query
+AuthStorage -> AuthManager: return result
+AuthManager -> AuthProvider: return result
+AuthProvider -> Form1: return result
+Form1 -> User: Gives user rights
+
+User -> Form1: AddNewRecordButton_click()
+Form1 -> StorageManager: AddNewRecordInDB(Shoes newRecord)
+StorageManager -> ShoesStorage: SQL_Query
+
+User -> Form1: EditRecordButton_click()
+Form1 -> StorageManager: EditRecordInDB(Shoes editedRecord)
+StorageManager -> ShoesStorage: SQL_Query
+
+User -> Form1: ReadRecordButton_click()
+Form1 -> StorageManager: ReadRecordInDB(string article)
+StorageManager -> ShoesStorage: SQL_Query
+ShoesStorage -> StorageManager: return new Shoes(Data)
+StorageManager -> Form1: return Shoes
+Form1 -> User: Information output
+
+User -> Form1: SearchByArticleButton_click(string article)
+Form1 -> ShoesManager: SearchByArticle(string article)
+ShoesManager -> StorageManager: ReadRecordInDB(string article)
+note right
+    Цей процес описан вище
+end note
+StorageManager -> ShoesManager: return new Shoes(Data)
+ShoesManager -> WordAPI: WriteResultOfSearchByArticle(shoes)
+WordAPI -> MSWordFile: MSWordFile
+
+User -> Form1: GetListOfFemaleShoesButton_click()
+Form1 -> ShoesManager: GetListOfFemaleShoes()
+ShoesManager -> StorageManager: ReadDataOfShoes()
+ShoesManager -> ShoesStorage: SQL_Query
+ShoesStorage -> StorageManager: return Data
+StorageManager -> ShoesManager: return new List<Shoes>
+ShoesManager -> WordAPI: WriteFemaleListOfShoes(shoesList)
+WordAPI -> MSWordFile: MSWordFile
+
+@enduml

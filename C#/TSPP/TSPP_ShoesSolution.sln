@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSPP_ShoesSolution", "TSPP_ShoesSolution.csproj", "{AD3665DA-FEED-42E1-B399-62B58BA731AF}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupShoesShop", "SetupShoesShop\SetupShoesShop.vdproj", "{CE2D810E-8DCC-4E4F-9B67-E9B692FA0BCD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD3665DA-FEED-42E1-B399-62B58BA731AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD3665DA-FEED-42E1-B399-62B58BA731AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD3665DA-FEED-42E1-B399-62B58BA731AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD3665DA-FEED-42E1-B399-62B58BA731AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE2D810E-8DCC-4E4F-9B67-E9B692FA0BCD}.Debug|Any CPU.ActiveCfg = Debug
+		{CE2D810E-8DCC-4E4F-9B67-E9B692FA0BCD}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23D9FF14-4B1C-4052-BDED-E387DF16F584}
+	EndGlobalSection
+EndGlobal
