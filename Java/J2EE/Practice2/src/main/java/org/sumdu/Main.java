@@ -9,7 +9,7 @@ public class Main {
         var registry = Registry.getRegistry();
 
         var manager = new Manager("Sasha Grishenka", "HR", 20000, 2000, 0);
-        var employeer = new Employee("Yaroslav Gorlach", "IT", 200, manager.getId());
+        var employeer = new Employee("Yaroslav Gorlach", "IT", 15000, manager.getId());
 
         // Позитивний сценарій
         try {

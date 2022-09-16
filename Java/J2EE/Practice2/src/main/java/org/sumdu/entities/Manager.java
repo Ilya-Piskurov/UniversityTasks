@@ -31,6 +31,18 @@ public class Manager extends Employee {
     }
 
     @Override
+    public void printInfo() {
+        if (dataCorruption) {
+            System.out.println("printInfo: Не всі дані коректні.\n");
+            return;
+        }
+        System.out.printf(
+                "Працівник (ID %s):\nІм'я: %s\nЗарплата: %.2f\nПремія: %.2f\nНазва департаменту: %s\nID менеджеру: %s\n",
+                id, name, salary, bonus, departmentName, managerId
+        );
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
