@@ -1,4 +1,3 @@
-Java/J2EE/Practice1/target/*
-C#/TSPP/.vs/*
-C#/TSPP/bin/*
-C#/TSPP/obj/*
+**/target
+**/bin
+**/obj

@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ad3665da-feed-42e1-b399-62b58ba731af": {
+      "ProjectGuid": "ad3665da-feed-42e1-b399-62b58ba731af",
+      "DisplayName": "TSPP_ShoesSolution",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    },
+    "8b7611dc-991e-4dfd-9972-4dc91c7c18f1": {
+      "ProjectGuid": "8b7611dc-991e-4dfd-9972-4dc91c7c18f1",
+      "DisplayName": "ShoesSolutionTests",
+      "ColorIndex": 1
+    },
+    "30fb7578-e9d7-4073-951f-60562659f3d2": {
+      "ProjectGuid": "30fb7578-e9d7-4073-951f-60562659f3d2",
+      "DisplayName": "ShoesSolutionTests",
+      "ColorIndex": 2
+    },
+    "395fb479-73b0-4812-8c58-0636bfa56f54": {
+      "ProjectGuid": "395fb479-73b0-4812-8c58-0636bfa56f54",
+      "DisplayName": "ShoesSolutionTests",
+      "ColorIndex": 3
+    },
+    "fef4f78a-05da-4491-94ea-5c15531f9a12": {
+      "ProjectGuid": "fef4f78a-05da-4491-94ea-5c15531f9a12",
+      "DisplayName": "TestProject1",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}
