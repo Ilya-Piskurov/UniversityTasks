@@ -1,4 +1,6 @@
-package org.sumdu;
+package org.sumdu.factory.states;
+
+import org.sumdu.Dice;
 
 public class Stats {
     
@@ -29,27 +31,6 @@ public class Stats {
         this.charisma     = charisma;
     }
 
-    public Memento save() {
-        return new Memento(
-                strength,
-                dexterity,
-                constitution,
-                intelligence,
-                wisdom,
-                charisma
-        );
-    }
-
-    public void loadState(Memento memento) {
-        Stats savedState = memento.getStats();
-        strength = savedState.strength;
-        dexterity = savedState.dexterity;
-        constitution = savedState.constitution;
-        intelligence = savedState.intelligence;
-        wisdom = savedState.wisdom;
-        charisma = savedState.charisma;
-    }
-
     public void writeStats() {
         System.out.println("================");
         System.out.println("=  Attributes  =");
@@ -63,5 +44,53 @@ public class Stats {
                 "Charisma: %d\n",
                 strength, dexterity, constitution, intelligence, wisdom, charisma
         );
+    }
+
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
+    public void setDexterity(int dexterity) {
+        this.dexterity = dexterity;
+    }
+
+    public void setConstitution(int constitution) {
+        this.constitution = constitution;
+    }
+
+    public void setIntelligence(int intelligence) {
+        this.intelligence = intelligence;
+    }
+
+    public void setWisdom(int wisdom) {
+        this.wisdom = wisdom;
+    }
+
+    public void setCharisma(int charisma) {
+        this.charisma = charisma;
+    }
+
+    public int getStrength() {
+        return strength;
+    }
+
+    public int getDexterity() {
+        return dexterity;
+    }
+
+    public int getConstitution() {
+        return constitution;
+    }
+
+    public int getIntelligence() {
+        return intelligence;
+    }
+
+    public int getWisdom() {
+        return wisdom;
+    }
+
+    public int getCharisma() {
+        return charisma;
     }
 }
