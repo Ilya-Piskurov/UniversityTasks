@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Practice8" />
-        <module name="AfinaProject" />
         <module name="AfinaGitHub" />
+        <module name="Practice8" />
+        <module name="Practice8_MVC" />
+        <module name="AfinaProject" />
       </profile>
     </annotationProcessing>
   </component>
